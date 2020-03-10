@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <select id="prioritySelect">
+      <option value="1">low priority</option>
+      <option value="2">medium priority</option>
+      <option value="3">high priority</option>
+    </select>
+    <input id="todoInput" />
+    <button onClick="addItem()" id="">Add</button>
+    <input
+      onClick="showNotDone()"
+      type="checkbox"
+      id="showNotDone"
+      name="showNotDone"
+    />
+    <label for="showNotDone">Show finished tasks only</label>
+    <input
+      onClick="showHighPriority()"
+      type="checkbox"
+      id="highPriorityButton"
+      name="highPriorityButton"
+    />
+    <label for="highPriorityButton">Show High Priority tasks first</label>
+    <ul id="resultArea"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,6 +1,5 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
 }
 :root {
     --color1: #4a4e4d; 
@@ -10,15 +9,27 @@
     --color5: #fe8a71;
 }
 body {
-    background-color: var(--color2);
+    background-color: var(--color4);
 }
 a {
     text-decoration: underline;
-    color:darkblue;
+    color: var(--color5);
 }
 a:hover {
-    color:blue;
+    cursor: pointer;
+    color: var(--color2);
+}
+label {
+    margin: 0;
+    padding-left: 4px;
 }
 .strikethrough {
     text-decoration: line-through;
+}
+
+
+footer {
+    position: fixed;
+    width:100%;
+    bottom: 0;
 }

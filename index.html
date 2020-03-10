@@ -10,55 +10,30 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link href="//db.onlinewebfonts.com/c/26f7bcdf8d188588f4744e5b49d12d6a?family=evfont" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <main class="container border">
-      <h1>Todo List2</h1>
-      <select id="prioritySelect">
-        <option value="1">low priority</option>
-        <option value="2">medium priority</option>
-        <option value="3">high priority</option>
-      </select>
-      <input id="todoInputXXX" />
-      <button onClick="addItem()" id="">Add</button>
-      <input
-        onClick="showNotDone()"
-        type="checkbox"
-        id="showNotDone"
-        name="showNotDone"
-      />
-      <label for="showNotDone">Show finished tasks only</label>
-      <input
-        onClick="showHighPriority()"
-        type="checkbox"
-        id="highPriorityButton"
-        name="highPriorityButton"
-      />
-      <label for="highPriorityButton">Show High Priority tasks first</label>
-      <ul class="bg-warning" id="resultArea"></ul>
-    </main> -->
-
-    <div class="container">
-      <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-gray pb-2 mb-0">To Do List</h6>
+    <div class="container" style="margin-bottom: 50px;">
+      <div class="my-3 p-3 bg1 rounded box-shadow">
+        <h1 class="pb-2 mb-0">To Do List</h1>
         <div
-          class="d-flex border-bottom border-gray pb-2 mb-0 align-items-center"
+          class="d-flex pb-2 mb-0 align-items-center"
         >
           <select id="prioritySelect" class="mr-2">
             <option value="1">low priority</option>
             <option value="2">medium priority</option>
             <option value="3">high priority</option>
           </select>
-          <input id="todoInput" class="rounded" />
-          <button onClick="addItem()" id="" class="rounded mr-2">Add</button>
+          <input id="todoInput" class="" />
+          <button onClick="addItem()" class="rounded mx-3 btn btn-large border-dark">Add</button>
           <input
             onClick="showNotDone()"
             type="checkbox"
             id="showNotDone"
             name="showNotDone"
           />
-          <label for="showNotDone" class="mr-2">Finished tasks only</label>
+          <label for="showNotDone" class="mr-4">Finished tasks only</label>
           <input
             onClick="showHighPriority()"
             type="checkbox"
@@ -68,73 +43,37 @@
           <label for="highPriorityButton">High Priority tasks first</label>
         </div>
         
-        <div id="list_section">
-        <div class="bg-warning border">
-          <div class="media text-muted pt-3">
-            <img
-              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_170c3d13eae%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_170c3d13eae%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%226.265625%22%20y%3D%2218.3484375%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-              alt=""
-              class="mr-2 rounded"
-            />
-            <div
-              class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
-            >
-              <div
-                class="d-flex justify-content-between align-items-center w-100"
-              >
-                <strong class="text-gray-dark">To Do Text</strong>
-                <div class="">
-                  <a href="#" class="mr-2">Remove</a>
-                  <a href="#">Marked Done</a>
-                </div>
+        <div class="row">
+          <div id="list_section" class="d-flex flex-column w-100 col-8"></div>
+
+          <div class="col d-flex flex-column align-items-center p-3">
+            <div class="border p-3 border-dark rounded">
+
+              <div class="text-center">
+                <p>Note - each mushroom is tied to a priority!</p>
               </div>
-              <span class="d-block">@not done</span>
-            </div>
+              <div class="d-flex my-2">
+                <img style="height:50px; width:50px;" src="img/mushroom_low.png" alt="" class="mr-2 rounded"/>
+                - low priority
+              </div>
+              <div class="d-flex my-2">
+                <img style="height:50px; width:50px;" src="img/mushroom_medium.png" alt="" class="mr-2 rounded"/>
+                - medium priority
+              </div>
+              <div class="d-flex my-2">
+                <img style="height:50px; width:50px;" src="img/mushroom_high.png" alt="" class="mr-2 rounded"/>
+                - high priority
+              </div>
+            </div> 
           </div>
-        </div>
         </div>
 
-        <!-- <div class="media text-muted pt-3">
-          <img
-            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_170c3d13eb1%20text%20%7B%20fill%3A%236f42c1%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_170c3d13eb1%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%236f42c1%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%226.265625%22%20y%3D%2218.3484375%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-            alt=""
-            class="mr-2 rounded"
-          />
-          <div
-            class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
-          >
-            <div
-              class="d-flex justify-content-between align-items-center w-100"
-            >
-              <strong class="text-gray-dark">Full Name</strong>
-              <a href="#">Follow</a>
-            </div>
-            <span class="d-block">@username</span>
-          </div>
-        </div>
-        <div class="media text-muted pt-3">
-          <img
-            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_170c3d13eb0%20text%20%7B%20fill%3A%23e83e8c%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_170c3d13eb0%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e83e8c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%226.265625%22%20y%3D%2218.3484375%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-            alt=""
-            class="mr-2 rounded"
-          />
-          <div
-            class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
-          >
-            <div
-              class="d-flex justify-content-between align-items-center w-100"
-            >
-              <strong class="text-gray-dark">Full Name</strong>
-              <a href="#">Follow</a>
-            </div>
-            <span class="d-block">@username</span>
-          </div>
-        </div> -->
         <small class="d-block text-right mt-3">
-          <a href="#">All suggestions</a>
+          <a href="#" onClick="clearList()">Clear List</a>
         </small>
       </div>
     </div>
+
     <footer>
       <div class="py-2 d-flex justify-content-center bg-secondary">
         <bold class="text-white px-2"> Made by Khoi Phan </bold>

@@ -1,5 +1,8 @@
+@import url(//db.onlinewebfonts.com/c/26f7bcdf8d188588f4744e5b49d12d6a?family=evfont);
+@font-face {font-family: "evfont"; src: url("//db.onlinewebfonts.com/t/26f7bcdf8d188588f4744e5b49d12d6a.eot"); src: url("//db.onlinewebfonts.com/t/26f7bcdf8d188588f4744e5b49d12d6a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/26f7bcdf8d188588f4744e5b49d12d6a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/26f7bcdf8d188588f4744e5b49d12d6a.woff") format("woff"), url("//db.onlinewebfonts.com/t/26f7bcdf8d188588f4744e5b49d12d6a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/26f7bcdf8d188588f4744e5b49d12d6a.svg#evfont") format("svg"); }
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: evfont;
 }
 :root {
     --color1: #4a4e4d; 
@@ -8,8 +11,15 @@
     --color4: #f6cd61; 
     --color5: #fe8a71;
 }
-body {
+.bg1 {
     background-color: var(--color4);
+}
+body {
+    background-color: var(--color5);
+    font-size: 26px;
+}
+.btn {
+    font-size: 26px;
 }
 a {
     text-decoration: underline;
@@ -26,7 +36,12 @@ label {
 .strikethrough {
     text-decoration: line-through;
 }
-
+#todoInput {
+    outline: 0;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-color: var(--color1);
+}
 
 footer {
     position: fixed;

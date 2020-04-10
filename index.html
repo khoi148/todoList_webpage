@@ -10,23 +10,30 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link href="//db.onlinewebfonts.com/c/26f7bcdf8d188588f4744e5b49d12d6a?family=evfont" rel="stylesheet" type="text/css"/>
+    <link
+      href="//db.onlinewebfonts.com/c/26f7bcdf8d188588f4744e5b49d12d6a?family=evfont"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container" style="margin-bottom: 50px;">
       <div class="my-3 p-3 bg1 rounded box-shadow">
         <h1 class="pb-2 mb-0">To Do List</h1>
-        <div
-          class="d-flex pb-2 mb-0 align-items-center"
-        >
+        <div class="d-flex pb-2 mb-0 align-items-center">
           <select id="prioritySelect" class="mr-2">
             <option value="1">low priority</option>
             <option value="2">medium priority</option>
             <option value="3">high priority</option>
           </select>
           <input id="todoInput" class="" />
-          <button onClick="addItem()" class="rounded mx-3 btn btn-large border-dark">Add</button>
+          <button
+            onClick="addItem()"
+            class="rounded mx-3 btn btn-large border-dark"
+          >
+            Add
+          </button>
           <input
             onClick="showNotDone()"
             type="checkbox"
@@ -42,29 +49,43 @@
           />
           <label for="highPriorityButton">High Priority tasks first</label>
         </div>
-        
+
         <div class="row">
           <div id="list_section" class="d-flex flex-column w-100 col-8"></div>
 
           <div class="col d-flex flex-column align-items-center p-3">
             <div class="border p-3 border-dark rounded">
-
               <div class="text-center">
                 <p>Note - each mushroom is tied to a priority!</p>
               </div>
               <div class="d-flex my-2">
-                <img style="height:50px; width:50px;" src="img/mushroom_low.png" alt="" class="mr-2 rounded"/>
+                <img
+                  style="height: 50px; width: 50px;"
+                  src="img/mushroom_low.png"
+                  alt=""
+                  class="mr-2 rounded"
+                />
                 - low priority
               </div>
               <div class="d-flex my-2">
-                <img style="height:50px; width:50px;" src="img/mushroom_medium.png" alt="" class="mr-2 rounded"/>
+                <img
+                  style="height: 50px; width: 50px;"
+                  src="img/mushroom_medium.png"
+                  alt=""
+                  class="mr-2 rounded"
+                />
                 - medium priority
               </div>
               <div class="d-flex my-2">
-                <img style="height:50px; width:50px;" src="img/mushroom_high.png" alt="" class="mr-2 rounded"/>
+                <img
+                  style="height: 50px; width: 50px;"
+                  src="img/mushroom_high.png"
+                  alt=""
+                  class="mr-2 rounded"
+                />
                 - high priority
               </div>
-            </div> 
+            </div>
           </div>
         </div>
 
@@ -79,7 +100,7 @@
         <bold class="text-white px-2"> Made by Khoi Phan </bold>
         <a
           class="text-warning"
-          href="https://github.com/khoi148/NumberGuessingGame"
+          href="https://github.com/khoi148/todoList_webpage"
           >Github link</a
         >
       </div>
